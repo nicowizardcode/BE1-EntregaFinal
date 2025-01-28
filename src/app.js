@@ -31,7 +31,7 @@ app.use('/api/product/', ProductRouter);
 app.use('/api/cart/', CartRouter);
 
 
-/*export const socketServer = new Server(httpServer);
+export const socketServer = new Server(httpServer);
 
 socketServer.on('connection', socket => {
     socket.on('message',async (data) =>{
@@ -41,10 +41,9 @@ socketServer.on('connection', socket => {
         })
         socketServer.emit('logs', await chatModel.find().lean())
     })
-}); */
+});
 
-//mongodb+srv://nicolascrd:pkodGPgXGutMNnu1@nicodb.cffo2.mongodb.net/?retryWrites=true&w=majority&appName=NicoDB
-//mongodb+srv://danielvillajuan:qpCcWENKy5dp6gRi@coderback.dkldvkl.mongodb.net/?retryWrites=true&w=majority&appName=Coderback
+
 mongoose.connect('mongodb+srv://nicolascrd:pkodGPgXGutMNnu1@nicodb.cffo2.mongodb.net/?retryWrites=true&w=majority&appName=NicoDB', { dbName: 'ecommerce' }).then(()=>{
     console.log('connect to database')
 })
